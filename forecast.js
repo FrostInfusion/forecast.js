@@ -1,6 +1,7 @@
 var url = "https://maps.googleapis.com/maps/api/geocode/json?address=";
 var user = process.argv.slice(2);
-var api_key = "AIzaSyBjVB8XMHXR3ITXdklydN4v7Wf5ZGn68eU";
+var api_key = "GOOGLEGEOLOCATIONAPIKEY"; //enter your Google Geolocation API key here
+var forecast_key ="FORECASTAPIKEY" //enter your forecast API key here
 //&key=
 //LT-76205
 var http = require("https");
@@ -12,7 +13,7 @@ var message = "Weather for: " + name;
 
 function returnLatLng(lat, lng) {
 	//Connect to the API URL
-	var request = http.get("https://api.forecast.io/forecast/45a93e577802abcf538f02ffe9f0b660/"+lat+","+lng, function(response){		
+	var request = http.get("https://api.forecast.io/forecast/"+forecast_key+"/"+lat+","+lng, function(response){		
 		var body = "";		
 		response.on('data', function (chunk) {
 		body += chunk;
