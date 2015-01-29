@@ -2,8 +2,6 @@ var url = "https://maps.googleapis.com/maps/api/geocode/json?address=";
 var user = process.argv.slice(2);
 var api_key = "GOOGLEGEOLOCATIONAPIKEY"; //enter your Google Geolocation API key here
 var forecast_key ="FORECASTIOAPIKEY" //enter your Forecast.io API key here
-//&key=
-//LT-76205
 var http = require("https");
 
 function printMessage(name) {
