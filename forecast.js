@@ -33,7 +33,7 @@ function returnLatLng(lat, lng) {
 			}}
 			else {
 				//status code error
-				printError({message: " The was an error getting the profile for " + username + ". (" + http.STATUS_CODES[response.statusCode] + ")"})
+				printError({message: " There was an error getting data from Forecast.io . (" + http.STATUS_CODES[response.statusCode] + ")"})
 			}
 		});
 	});	
